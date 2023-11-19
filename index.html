@@ -5,11 +5,229 @@
  <meta name="keywords" content="Football, Gear, Boots, Football gear, Football gloves">
  <meta name="author" content="Kristijan Horvat">
 <head>
+
+    <link rel="icon" href="img/webicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootGear+</title>
+
 </head>
 <body>
+    <header>
+        <a href="index.html"><img src="img/weblogo.png" alt="Logo" class="logo">
+        <nav>
+        <ul>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+        </ul>
+        </nav>
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Website search...">
+            <button type="submit">Search</button>
+        </form>   
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="img/img1.jpg" alt="Full sized pitch" class="hero"> 
+            <div class="logo-container">
+              <div class="transparent-box"></div>
+              <img src="img/weblogo2.png" alt="Logo">
+            </div>
+          </div>
+        
+        <div class="container">
+            <div class="box">
+                <div class="text-container">
+                    <h1 class="hero-text">WELCOME</h1>
+                    <h3 class="info-text1">The best gear to use for playing football.</h3>
+                    <h4 class="info-text2">Selected by the best. Built to create the best.</h4>
+                    <h5 class="info-text3">Try yourself. Shop now.</h5>
+                </div>
+            </div>
+            
+            <img src="img/neymar.jpg" alt="Neymar Jr" class="small-image">
+        </div>
+    </section> 
+
+
+
+    <section id="shop">
+
+        <div class="container">
+                <div class="text-container">
+                    <h1 class="hero-text">Shop</h1>
+                    <h3 class="info-text4">Find what's best for you and your team.</h3>
+                    <h4 class="info-text5">Free shipping on all orders over 39$.</h4>
+                    <h5 class="info-text6">We surely have something for you.</h5>
+            </div>
+            
+        
+    </section>     
     
+    <hr> 
+
+    <div class="container-item">
+        <div class="box-item">
+            <img src="img/shop1.jpeg" alt="Item image 1" class="item-image"> 
+          </div>
+          <div class="box-item">
+            <img src="img/shop2.jpeg" alt="Item image 2" class="item-image">
+          </div>
+          <div class="box-item">
+            <img src="img/shop3.jpeg" alt="Item image 3" class="item-image">
+          </div>
+          <div class="box-item">
+            <img src="img/shop4.jpeg" alt="Item image 4" class="item-image">
+          </div>
+    </div>
+
+    <div class="container-info">
+        <div class="box-info">
+            <p>Goalkeepers's gloves</p>
+            <h6>Made for epic saves</h6>
+            <h2 id="modal1">View more and buy now</h2>
+        </div>
+        <div class="box-info">
+            <p>Striker's boots</p>
+            <h6>Made for ruin epic saves</h6>
+            <h2 id="modal2">View more and buy now</h2>
+        </div>
+        <div class="box-info">
+            <p>Everyone's gear bag</p>
+            <h6>Made to fit everything you need.</h6>
+            <h2 id="modal3">View more and buy now</h2>
+        </div>
+        <div class="box-info">
+            <p>Must need shin guards</p>
+            <h6>Made to protect from anything</h6>
+            <h2 id="modal4">View more and buy now</h2>
+        </div>
+      </div>
+
+      <div id="modalContainer" class="modal-container">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="modalContent"></div>
+        </div>
+      </div>  
+    </section>
+
+    <section id="about">
+
+        <div class="container">
+                <div class="text-container">
+                    <h1 class="hero-text">About us</h1>
+                    <h3 class="info-text7">Your new favourite football gear.</h3>
+                    <h4 class="info-text8">Created in California. Established in ’23 .</h4>
+                    <h5 class="info-text9">We are here to help you find the best gear for you.</h5>
+            </div>
+
+    </section>    
+
+    <hr> 
+    
+    
+    <div class="container">
+        <div class="box-about">
+            <div class="text-container">
+                <h3 class="about-text1">FootGear+ was born in the sunny heart of California in 2023, a passion-driven venture founded by a group of sports enthusiasts with a shared love for the game of football. With our roots firmly planted in the Golden State, we set out on a journey to redefine the world of football equipment.
+                </h3>
+
+                <h3 class="about-text2">Inspired by the spirit of innovation, we embarked on a mission to create cutting-edge gear that empowers players at all levels to perform at their very best. Our commitment to quality and performance is unwavering, and we design every product with precision and care.
+                </h3>
+
+                <h3 class="about-text3">As a team of athletes, coaches, and designers, we understand the unique needs of football players. Our goal is to equip you with the best tools to elevate your game. Join us on this exciting adventure, and together, we’ll write the future of football gear.
+                </h3>
+            </div>
+            <br> <br> 
+
+        </div>
+
+        <img src="img/aboutus1.jpeg" alt="Head office" class="small-image2">
+
+        <br> <br> <br> <br> <br>
+    </div>       
+
+
+
+<script>
+const modalContainer = document.getElementById("modalContainer");
+const closeButton = document.getElementsByClassName("close")[0];
+
+const modalContent = document.getElementById("modalContent");
+
+const h2Elements = document.getElementsByTagName("h2");
+
+for (let i = 0; i < h2Elements.length; i++) {
+  h2Elements[i].addEventListener("click", function () {
+    const boxItemContent = document.getElementsByClassName("box-item")[i].innerHTML;
+    const boxInfoContent = document.getElementsByClassName("box-info")[i].innerHTML;
+
+    modalContent.innerHTML = boxItemContent + boxInfoContent;
+
+    modalContainer.style.display = "block";
+  });
+}
+
+closeButton.addEventListener("click", function () {
+  modalContainer.classList.add("hide");
+  setTimeout(function () {
+    modalContainer.style.display = "none";
+    modalContainer.classList.remove("hide");
+  }, 200);
+});
+
+
+
+function scrollToTop() {
+  let scrollStep = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollInterval = setInterval(function() {
+    if (scrollStep > 0) {
+      window.scrollBy(0, -50);
+      scrollStep -= 50;
+    } else {
+      clearInterval(scrollInterval);
+      document.documentElement.style.overflow = "auto"; 
+      document.body.style.overflow = "auto"; 
+    }
+  }, 16);
+
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  scrollToTopBtn.style.opacity = "0";
+  scrollToTopBtn.style.pointerEvents = "none";
+  const fadeInterval = setInterval(function() {
+    if (scrollToTopBtn.style.opacity < 1) {
+      scrollToTopBtn.style.opacity = parseFloat(scrollToTopBtn.style.opacity) + 0.1;
+    } else {
+      clearInterval(fadeInterval);
+      scrollToTopBtn.style.pointerEvents = "auto";
+    }
+  }, 50);
+}
+
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (document.documentElement.scrollTop > 20 || document.body.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+
+</script>
+
+
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Scroll to Top"> 
+<img src="img/scroll1.png" alt="Scroll to Top">
+</button>
 </body>
+
+
 </html>
