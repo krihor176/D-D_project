@@ -11,7 +11,6 @@ header {
     border: 1px solid black;
 }
 
-
 section#home .hero {
     position: relative;
   }
@@ -91,18 +90,18 @@ nav {
     justify-content: center;
 }
   
-  nav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     display: flex;
     justify-content: center;
   }
   
-  nav ul li {
+nav ul li {
     display: inline-block;
   }
   
-  nav ul li a {
+nav ul li a {
     display: block;
     padding: 0px 40px;
     color: white;
@@ -112,27 +111,27 @@ nav {
 
   }
   
-  nav ul li a:hover {
+nav ul li a:hover {
     background-color: #507935;
     transform: translateY(-10px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     color: #fff;
   }
 
-  section#home .text-container {
+section#home .text-container {
     text-align: left;
     margin-top: -30px;
     margin-left: 50px;
   }
   
-  section#home .hero-text {
+section#home .hero-text {
     font-size: 70px;
     color: black;
     font-family: Arial, sans-serif;
     font-weight: bold; 
   }
 
-  section#shop .hero-text {
+section#shop .hero-text {
     font-size: 70px;
     color: black;
     font-family: Arial, sans-serif;
@@ -140,7 +139,7 @@ nav {
     margin-left: 80px;
   }
 
-  section#about .hero-text {
+section#about .hero-text {
     font-size: 70px;
     color: black;
     font-family: Arial, sans-serif;
@@ -157,38 +156,21 @@ nav {
     margin-top: 10px;
   }
   
-  section#home .info-text1  {
+section#home .info-text1  {
     font-size: 30px;
     color: black;
     font-family: Arial, sans-serif;
     margin-top: -30px;
   }
 
-  section#home .info-text2, section#home .info-text3 {
+section#home .info-text2, section#home .info-text3 {
     font-size: 20px;
     color: black;
     font-family: Arial, sans-serif;
     margin-top: 20px;
   }
 
-  section#shop .info-text4 {
-    font-size: 30px;
-    color: black;
-    font-family: Arial, sans-serif;
-    margin-top: -30px;
-    margin-left: 80px;
-
-  }
-
-  section#shop .info-text5, section#shop .info-text6 {
-    font-size: 20px;
-    color: black;
-    font-family: Arial, sans-serif;
-    margin-top: 20px;
-    margin-left: 80px;
-  }
-
-  section#about .info-text7 {
+section#shop .info-text4 {
     font-size: 30px;
     color: black;
     font-family: Arial, sans-serif;
@@ -197,7 +179,7 @@ nav {
 
   }
 
-  section#about .info-text8, section#about .info-text9 {
+section#shop .info-text5, section#shop .info-text6 {
     font-size: 20px;
     color: black;
     font-family: Arial, sans-serif;
@@ -205,7 +187,24 @@ nav {
     margin-left: 80px;
   }
 
-  .small-image {
+section#about .info-text7 {
+    font-size: 30px;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-top: -30px;
+    margin-left: 80px;
+
+  }
+
+section#about .info-text8, section#about .info-text9 {
+    font-size: 20px;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+.small-image {
     width: 330px;
     height: 330px;
     margin-right: 150px;
@@ -219,21 +218,21 @@ nav {
     display: flex;
   }
 
-  hr {
+hr {
     height: 10px;
     background-color: #507935; 
     margin-top: -20px;
     width: 1280px;
   }
 
-  .container-item {
+.container-item {
     display: flex;
     justify-content: space-between;
     margin-left: 80px;
     margin-right: 80px;
   }
   
-  .box-item {
+.box-item {
     width: 327px; 
     height: 300px;
     background-color: #ffffff;
@@ -241,29 +240,30 @@ nav {
     margin: 0 5px; 
   }
 
-  .item-image {
+.item-image {
     width: 300px;
     height: 300px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
   }
 
-  .container-info {
+.container-info {
     display: flex;
     justify-content: space-between;
     margin-left: 80px;
     margin-right: 80px;
   }
 
-  .box-info {
+.box-info {
     width: 327px; 
     height: 150px;
     background-color: #ffffff;
     border: 2px solid #507935;
     margin: 0 5px; 
+    cursor: pointer;
   }
 
-  p {
+p {
     font-size: 20px;
     color: black;
     font-family: Arial, sans-serif;
@@ -308,7 +308,7 @@ h2 {
     margin-left: 30px;
   }
 
-  .small-image2 {
+.small-image2 {
     width: 370px;
     height: 330px;
     margin-right: 150px;
@@ -358,24 +358,8 @@ h2 {
   cursor: pointer;
 }
 
-@keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
-  @keyframes fade-out {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  #scrollToTopBtn {
+#scrollToTopBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -398,14 +382,23 @@ h2 {
     transition: padding 0.3s ease; 
   }
 
-  #scrollToTopBtn:hover {
+#scrollToTopBtn:hover {
     padding: 10px; 
     background-color: #507935;
     animation: fade-in 0.3s forwards; 
 
   }
 
-  @keyframes fade-in {
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@keyframes fade-out {
     from {
       opacity: 0;
     }
